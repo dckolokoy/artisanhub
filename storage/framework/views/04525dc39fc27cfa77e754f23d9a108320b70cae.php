@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('nav'); ?>
 
 
@@ -182,104 +184,7 @@ if ($query->num_rows > 0) {
 
 <div>
         <div class="row">
-            <div class="col-3">
 
-                <div class="small-box bg-info">
-                <div class="inner">
-                <h3><?php echo e($user_count1); ?></h3>
-                <p>Total Users</p>
-                </div>
-                <div class="icon">
-                <i class="ion ion-bag"></i>
-                </div>
-                <a href="/admin/user/approved" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-3">
-
-                <div class="small-box bg-success">
-                <div class="inner">
-                <h3><?php echo e($membership_count); ?></sup></h3>
-          
-                <p>Total Memberships</p>
-                </div>
-                <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="/admin/membership" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-3">
-
-                <div class="small-box bg-warning">
-                <div class="inner">
-                <h3><?php echo e($transaction_count); ?></h3>
-                <p>Total Transactions</p>
-                </div>
-                <div class="icon">
-                <i class="ion ion-person-add"></i>
-                </div>
-                <a href="/admin/transaction/order" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-3">
-
-                <div class="small-box bg-danger">
-                <div class="inner">
-                <h3><?php echo e(number_format($average, 2)); ?></h3>
-                <p>Average Transaction Per Month</p>
-                </div>
-                <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="/admin/transaction/order" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-3">
-
-                <div class="small-box bg-primary">
-                <div class="inner">
-                <h3><?php echo e(number_format($total_user_per_month1, 2)); ?></h3>
-                <p>Average User Logins Per Day</p>
-                </div>
-                <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-                </div>
-              <br>
-                </div>
-            </div>
-            <div class="col-3">
-
-<div class="small-box bg-secondary">
-<div class="inner">
-<h3><?php echo e($dataMenu); ?></h3>
-<p>Total Artworks Created</p>
-</div>
-<div class="icon">
-<i class="ion ion-pie-graph"></i>
-</div>
-
-<a href="/admin/product" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-</div>
-</div>
-<div class="col-3">
-
-<div class="small-box bg-success">
-<div class="inner">
-
-<h3><?php echo e(number_format($total_sales, 2)); ?></sup></h3>
-<p>Total Sales</p>
-</div>
-<div class="icon">
-<i class="ion ion-stats-bars"></i>
-</div>
-<a href="/admin/membership" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-</div>
-</div>
 
             <!-- <div class="col-3">
 
