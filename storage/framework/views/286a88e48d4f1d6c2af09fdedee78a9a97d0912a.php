@@ -40,7 +40,7 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23c593d8' width='3' height='3' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
   </style>
-  <div class="container py-5" style="background-color:rgb(230, 252, 255)">
+  <div class="container py-5" style="background-color:rgb(203, 159, 159)">
     <div class="row">
 
         <div class="col-sm-3">
@@ -141,7 +141,7 @@ function resetForm() {
             <?php $__currentLoopData = $menu_items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 
                 <div class="col-md-4">
-                    <div class="card mb-4 product-wap rounded-0">
+                    <div class="card mb-4 product-wap rounded-0" style="background-color:rgb(111, 182, 169)">
                         <?php if($menu_item->type=='tangible'): ?>'
                     <?php
                     $side=DB::table("side_backs")
@@ -167,8 +167,7 @@ function resetForm() {
                             <img class="card-img rounded-0 img-fluid" style="  width:  100%;
                             height: 400px;"
                             src="<?php echo e(asset(''.$menu_item->image.'')); ?>">
-                            <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple  ; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;"><?php echo e($menu_item->artist); ?> </div>
-  <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
+                          <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                 <ul class="list-unstyled">
                                     <li>
                                     <?php if(Auth::check()): ?>
@@ -278,8 +277,7 @@ function resetForm() {
                             <img class="card-img rounded-0 img-fluid" style="  width:  100%;
                             height: 400px;"
                             src="<?php echo e(asset(''.$side->a_image.'')); ?>">
-                            <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple  ; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;"><?php echo e($menu_item->artist); ?> </div>
-  <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
+                           <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                 <ul class="list-unstyled">
                                     <li>
                                     <?php if(Auth::check()): ?>
@@ -390,8 +388,7 @@ function resetForm() {
                             <img class="card-img rounded-0 img-fluid" style="  width:  100%;
                               height: 400px;"
                             src="<?php echo e(asset(''.$back->b_image.'')); ?>">
-                            <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple  ; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;"><?php echo e($menu_item->artist); ?> </div>
-  <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
+                     
                                 <ul class="list-unstyled">
                                     <li>
                                     <?php if(Auth::check()): ?>
@@ -510,13 +507,12 @@ function resetForm() {
                                               </div>
 <?php else: ?>
    
-<div class="card rounded-0">
+<div class="card rounded-0 "style="background-color:rgb(111, 182, 169)">
     
                                 <img class="card-img mt-4 rounded-0 img-fluid" style="  width:  100%;
                                  height: 400px;"
                                 src="<?php echo e(asset(''.$menu_item->image.'')); ?>">
-                                <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple  ; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;"><?php echo e($menu_item->artist); ?> </div>
-      <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
+                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                     <ul class="list-unstyled">
                                         <li>
                                         <?php if(Auth::check()): ?>

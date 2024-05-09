@@ -75,7 +75,7 @@
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center" id="context">
                             <h1 class="h1" style="color:black;">ArtisanHub </h1>
-                            <h3 class="h2">A Web System for Graphic Artists using sorting and analytics.
+                         
                             </h3>
                             <p>
                                 Digital art can be purely computer-generated (such as fractals and algorithmic art) or taken from other sources, such as a scanned photograph or an image drawn using vector graphics software using a mouse or graphics tablet. Artworks are considered digital paintings when created similarly to non-digital paintings but using software on a computer platform and digitally outputting the resulting image as painted on canvas.</p>
@@ -92,12 +92,12 @@
 
                     </div>
                     <div class="mx-auto col-md-8 col-lg-5 order-lg-last d-flex justify-content-center" >
-                        <img id="carousel_img_height" class="img-fluid second" src="<?php echo e(asset('/justnpot/images/menu/m2.jpeg')); ?>" alt="">
+                        <img id="carousel_img_height" class="img-fluid second" src="<?php echo e(asset('/justnpot/images/menu/menu2.jpeg')); ?>" alt="">
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center" id="context">
                             <h1 class="h1" style="color:black;">ArtisanHub </h1>
-                            <h3 class="h2">A Web System for Graphic Artists using sorting and analytics.
+                        
                             </h3>
                             <p>
                                 3D graphics are created via the process of designing imagery from geometric shapes, polygons or NURBS curves[12] to create three-dimensional objects and scenes for use in various media such as film, television, print, rapid prototyping, games/simulations and special visual effects.</div>
@@ -113,12 +113,12 @@
 
                     </div>
                     <div class="mx-auto col-md-8 col-lg-5 order-lg-last d-flex justify-content-center" >
-                        <img id="carousel_img_height" class="img-fluid second" src="<?php echo e(asset('/justnpot/images/menu/m1.jpeg')); ?>" alt="">
+                        <img id="carousel_img_height" class="img-fluid second" src="<?php echo e(asset('/justnpot/images/menu/main4.jpg')); ?>" alt="">
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center" id="context">
                             <h1 class="h1" style="color:black;">ArtisanHub </h1>
-                            <h3 class="h2">A Web System for Graphic Artists using sorting and analytics.
+                    
                             </h3>
                             <p>
                                 Digital visual art consists of either 2D visual information displayed on an electronic visual display or information mathematically translated into 3D information, viewed through perspective projection on an electronic visual display. The simplest is 2D computer graphics which reflect how you might draw using a pencil and a piece of paper. In this case, however, the image is on the computer screen and the instrument you draw with might be a tablet stylus or a mouse. </div>
@@ -191,8 +191,8 @@ if ($itemExist ->isNotEmpty()) {
 }
 
                 ?>
-                            <div class="card mb-4 product-wap rounded-0">
-                                <div class="card rounded-0">
+                            <div class="card mb-4 product-wap rounded-0" style="background-color:rgb(111, 182, 169)">
+                                <div class="card rounded-0 "style="background-color:rgb(111, 182, 169)"">
                                 <?php if($menu2->type=='tangible'): ?>'
                         <?php
                         $side=DB::table("side_backs")
@@ -218,10 +218,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu2->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu2->artist); ?>
-
-    </div>
+    
 <?php endif; ?>
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
@@ -322,10 +319,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu2->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu2->artist); ?>
-
-    </div>
+    
 <?php endif; ?>
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
@@ -427,10 +421,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu2->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu2->artist); ?>
-
-    </div>
+    
 <?php endif; ?>     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
                                             <li>
@@ -541,10 +532,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu2->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu2->artist); ?>
-
-    </div>
+    
 <?php endif; ?>   <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
                                             <li>
@@ -696,7 +684,7 @@ if ($itemExist ->isNotEmpty()) {
                     <?php $__currentLoopData = $data['menu3']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu3): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-0">
-                                <div class="card rounded-0">
+                                <div class="card rounded-0 ">
                                     <img class="card-img rounded-0 img-fluid" style="  width:  100%;
                                     height: 300px;
                                     object-fit: cover;"
@@ -848,8 +836,8 @@ if ($itemExist ->isNotEmpty()) {
 }
 
                 ?>
-                            <div class="card mb-4 product-wap rounded-0">
-                                <div class="card rounded-0">
+                            <div class="card mb-4 product-wap rounded-0 " style="background-color:rgb(111, 182, 169)">
+                                <div class="card rounded-0" style="background-color:rgb(111, 182, 169)">
                                 <?php if($menu4->type=='tangible'): ?>'
                         <?php
                         $side=DB::table("side_backs")
@@ -875,10 +863,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu4->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu4->artist); ?>
-
-    </div>
+    
 <?php endif; ?>
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
@@ -979,10 +964,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu4->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu4->artist); ?>
-
-    </div>
+    
 <?php endif; ?>
                                     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
@@ -1084,10 +1066,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu4->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu4->artist); ?>
-
-    </div>
+    
 <?php endif; ?>     <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
                                             <li>
@@ -1198,10 +1177,7 @@ if ($itemExist ->isNotEmpty()) {
                                     <?php if($purchased): ?>
     <div id="watermark" style="display: none;"><?php echo e($menu4->artist); ?></div>
 <?php else: ?>
-    <div id="watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); color: purple; opacity: .5; font-size: 28px !important; font-weight: bold; text-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 10px rgba(255,255,255,0.7); display: inline-block; width: 100%; text-align: center;">
-        <?php echo e($menu4->artist); ?>
-
-    </div>
+    
 <?php endif; ?>   <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-left justify-content-left">
                                         <ul class="list-unstyled">
                                             <li>
@@ -1378,7 +1354,7 @@ if ($itemExist ->isNotEmpty()) {
 
         foreach ($users2 as $user2) {
             ?>
-                <div class="col-12 col-md-4 p-5 mt-3">
+                <div class="col-12 col-md-4 p-5 mt-3" style="background-color:rgb(111, 182, 169)">
                   <img src="<?php echo e(asset('uploads/image_id/'.$user2->picture.'')); ?>" class="rounded-circle img-fluid border"
                   style="  width: 100%;height: 300px; ">
 
@@ -1471,9 +1447,7 @@ if ($itemExist ->isNotEmpty()) {
                 <div class="row no-gutters">
                   <div class="col-md-4 geeks">
                   <div class="watermark-wrapper">
-                  <div class="watermark1"> 
-                    <strong><span id="artist2"></span></strong>
-                  </div>
+                  
                   <img src="" id="imagess" class="card-img" alt="..." style="width: 100%; height: 300px;">
                 </div>
                   </div>
