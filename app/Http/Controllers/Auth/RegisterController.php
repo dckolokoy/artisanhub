@@ -3,96 +3,20 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Image;
-// composer require intervention/image
+
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
     use RegistersUsers;
 
-   
- 
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'type' => ['required'],
-            'gender' => ['required'],
-            'password' => [
-                'required',
-                'min:8',
-                'regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/',  'confirmed'],
-            
-            // password' => ['required', 'string', 'min:1', 'confirmed','regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/'],
-            'image' => ['required'],
-            'picture' => ['required'],
-        ],
-        [
-            'password.regex' => 'Password not following correct format',
-        ]
-    );  
-    }
-    //  protected function failedValidation(Validator $validator)
-    //  {
-    //      return redirect()->back()->withErrors($validator);
-    //  }
-
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
-    
     protected function create(array $data)
     {
-        // $request = app('request');
-        //  if ($request->hasfile('image')) {
-        // $avatar = $request->file('image');
-        // $filename = time() . '.' . $image->getClientOriginalExtension();
-
-        //Implement check here to create directory if not exist already
-
-        // Image::make($avatar)->resize(300, 300)->save(public_path('uploads/image_id/' . $filename));
-
-        $request = app('request');
+           $request = app('request');
         // $this->validator($data)->validate();
         if($request->hasfile('image')&&$request->hasFile('picture')){
             $file = $request->file('image');
@@ -110,7 +34,6 @@ class RegisterController extends Controller
         }
       
 
-
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -126,9 +49,31 @@ class RegisterController extends Controller
             'birthdate' => $data['birthdate'],
             'gender' => $data['gender'],
         ]);
-     
-
     }
 
+    protected function registered(Request $request, $user)
+    {
+        // Override the registered method to prevent automatic login
+        // You can add any custom logic here
+        return redirect()->route('login')->with('success', 'Registration successful! Please wait for the approval of the admin to be sent via email.');
+    }
 
+    public function register(Request $request)
+    {
+        // Validate the incoming registration request
+        $this->validator($request->all())->validate();
+
+        // Create the user
+        event(new Registered($user = $this->create($request->all())));
+
+        // Redirect the user to the login page with a success message
+        return $this->registered($request, $user);
+    }
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            // Define validation rules here
+        ]);
+    }
 }

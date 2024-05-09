@@ -29,7 +29,7 @@
   position: relative;
 }
 
-.watermark1 {
+/* .watermark1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +42,7 @@
   display: inline-block;
   width: 100%;
   text-align: center;
-}
+} */
     /* #loading { display: none; } */
     .top-content .carousel-control-prev-icon {
         bottom: -75%;
@@ -143,7 +143,7 @@
 
                     </div>
                     <div class="mx-auto col-md-8 col-lg-5 order-lg-last d-flex justify-content-center" >
-                        <img id="carousel_img_height" class="img-fluid second" src="{{ asset('/justnpot/images/menu/main3.jpeg')}}" alt="">
+                        <img id="carousel_img_height" class="img-fluid second" src="{{ asset('/justnpot/images/menu/main3.jpg')}}" alt="">
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center" id="context">
@@ -214,15 +214,13 @@
 
 
 <!-- Start Featured Product -->
-<section class="p-5" style="background-color:rgb(230, 252, 255)">
+<section class="p-5" style="background-color:rgb(203, 159, 159)">
 <div class="top-content">
     <div class="container ">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto" >
-                <h1 class="h1" id="foos">Featured Product</h1>
-                <p style=" font-style: italic;">
-                    “Itinatampok na Produkto”
-                </p>
+                <h1 class="h1" id="foos">Products</h1>
+            
 
                 <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -428,11 +426,11 @@ if ($itemExist ->isNotEmpty()) {
                                                         }
                                                         @endphp
                                                         @if ($liked == 1)
-                                                            <a class="btn  text-white unlikeBtn" data-id="{{ $menu2->m_id }}" style="background-color: red" href="shop-single.html">
+                                                            <a class="btn text-white unlikeBtn" data-id="{{ $menu2->m_id }}" style="background-color: red" href="shop-single.html">
                                                                 <i class="far fa-heart"><span style="font-size: 15px !important;">{{ $total_likes1 }}</span></i>
                                                             </a>
                                                         @else
-                                                            <a class="btn  btn-success text-white likeBtn"  data-id="{{ $menu2->m_id }}" href="shop-single.html">
+                                                            <a class="btn btn-success text-white likeBtn"  data-id="{{ $menu2->m_id }}" href="shop-single.html">
                                                                 <i class="far fa-heart"><span style="font-size: 15px !important;">{{ $total_likes1 }}</span></i>
                                                             </a>
                                                         @endif
@@ -1424,14 +1422,12 @@ if ($itemExist ->isNotEmpty()) {
 <!-- End Featured Product -->
 
 <!-- Start Categories of The Month -->
-<div class="p-5" style="background-image: linear-gradient(180deg, rgb(230, 252, 255), rgb(194, 239, 247));">
+<div class="p-5" style="background-color:rgb(203, 159, 159)">
 <section class="container " >
     <div class="row text-center pt-3">
         <div class="col-lg-6 m-auto">
-            <h1 class="h11">Top Artists</h1>
-            <p style=" font-style: italic;">
-                “Nangungunang mga Manlilikha”
-            </p
+            <h1 class="h11">Artists</h1>
+        
         </div>
     </div>
     <div class="row" style="">

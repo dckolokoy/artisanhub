@@ -217,9 +217,8 @@ Note: Password must contain this<br> <br>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-md-4 col-form-label text-md-end">{{ __('I Agree to Artisan Hub Privacy Policy') }}</label>
-
-                            <div class="col-md-6">
+                          <label class="col-md-4 col-form-label text-md-end">{{ __('I Agree to Artisan Hub Privacy Policy') }}</label>
+ <div class="col-md-6">
                                 <input id="agreeCheckbox" type="checkbox" class="form-check-input" name="agreeCheckbox" required>
                             </div>
                         </div>

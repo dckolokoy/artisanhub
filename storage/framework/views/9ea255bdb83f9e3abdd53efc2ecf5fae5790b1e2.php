@@ -1,7 +1,8 @@
+
 <?php $__env->startSection('title', 'Login'); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 100px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -14,8 +15,11 @@
                         </div>
                         <?php echo csrf_field(); ?>
                         <?php if(session()->has('message')): ?>
-                            <div class="alert alert-warning text-center"><?php echo session('message'); ?></div>
-                        <?php endif; ?>
+                        <div class="alert alert-warning text-center"><?php echo e(session('message')); ?></div>
+                    <?php endif; ?>
+                    <?php if(session()->has('success')): ?>
+                        <div class="alert alert-success text-center"><?php echo e(session('success')); ?></div>
+                    <?php endif; ?>
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end"><?php echo e(__('Email Address')); ?></label>
 

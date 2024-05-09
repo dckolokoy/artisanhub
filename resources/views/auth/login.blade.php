@@ -2,7 +2,7 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 100px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,8 +15,11 @@
                         </div>
                         @csrf
                         @if (session()->has('message'))
-                            <div class="alert alert-warning text-center">{!! session('message') !!}</div>
-                        @endif
+                        <div class="alert alert-warning text-center">{{ session('message') }}</div>
+                    @endif
+                    @if (session()->has('success'))
+                        <div class="alert alert-success text-center">{{ session('success') }}</div>
+                    @endif
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 

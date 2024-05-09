@@ -56,7 +56,7 @@
 
 </head>
 
-<body>
+<body style=" background-color:rgb(203, 159, 159)">
     <?php echo e(\EmtiazZahid\Tidio\Tidio::widgetCode('ookyp1vlx6pqnq1hcannjym20nhkgize')); ?>
 
     <?php echo $__env->make('justnpot.layout.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>;

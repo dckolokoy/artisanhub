@@ -56,7 +56,7 @@
 
 </head>
 
-<body>
+<body style=" background-color:rgb(203, 159, 159)">
     {{ \EmtiazZahid\Tidio\Tidio::widgetCode('ookyp1vlx6pqnq1hcannjym20nhkgize') }}
     @include('justnpot.layout.header');
 
