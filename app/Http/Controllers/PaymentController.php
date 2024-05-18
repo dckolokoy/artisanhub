@@ -55,6 +55,7 @@ class PaymentController extends Controller
                     'cancelUrl' => url('error'),
                 ))->send();
 
+                
                 if ($response->isRedirect()) {
                     $response->redirect(); // this will automatically forward the customer
                 } else {
